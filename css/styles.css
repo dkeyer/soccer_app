@@ -9,7 +9,7 @@
 
 @media screen and (min-width:1024px){
    
-    }
+    
 
 *{
     margin: 0;
@@ -38,4 +38,16 @@ justify-content: center;
 
 .day, .hour, .minute, .second{
     font-size: 3rem;
+}
+
+.pic{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: right;
+    max-width: 50%;
+    min-height: 50%;
+    object-fit: cover;
+}
+
 }
