@@ -1,8 +1,11 @@
+
+
+
 const countdown = () => {
     const datecounter = new Date("November 20, 2021 07:30:00").getTime();
     const ahora = new Date().getTime();
     const difference = datecounter - ahora;
-    console.log(datecounter)
+    
 
 
 //time calculated in milliseconds, so need to convert them
@@ -25,3 +28,149 @@ document.querySelector(".second").innerText = secondsLeft;
 
 setInterval(countdown, 1000);
 
+const validatePredictions = () => {
+
+const nameInput = document.getElementById('name').value;
+const emailInput = document.getElementById('email').value;
+const predictionInput = document.getElementById('prediction').value;
+
+if (nameInput.length < 2) 
+{
+    alert('wrong');
+}
+
+else if (!emailInput.includes("@")){
+    alert("Please enter a valid email");
+}
+
+else if (predictionInput > 100) {
+    alert("be realistic");
+}
+
+
+
+else {
+    alert("Thank you for your prediction!");
+  }
+
+};
+
+
+
+var teamStats = [
+    {
+      team: "Leicester City",
+      totalG: 23,
+      totalGA: 10
+    },
+    {
+      team: "Aston Villa",
+      totalG: 23,
+      totalGA: 10
+    },
+    {
+      team: "Burnley",
+      totalG: 23,
+      totalGA: 10
+    },
+    {
+      team: "Newcastle United",
+      totalG: 23,
+      totalGA: 10
+    },
+    {
+      team: "Norwich City",
+      totalG: 23,
+      totalGA: 10
+    },
+    {
+      team: "Watford",
+      totalG: 23,
+      totalGA: 10
+    },
+    {
+      team: "Wolverhampton Wanderers",
+      totalG: 23,
+      totalGA: 10
+    },
+    {
+      team: "Liverpool",
+      totalG: 23,
+      totalGA: 10
+    },
+    {
+      team: "Manchester City",
+      totalG: 23,
+      totalGA: 10
+    },
+    {
+      team: "Tottenham Hotspur",
+      totalG: 23,
+      totalGA: 10
+    },
+    {
+      team: "Chelsea",
+      totalG: 23,
+      totalGA: 10
+    },
+    {
+      team: "Brighton & Hove Albion",
+      totalG: 23,
+      totalGA: 10
+    },
+    {
+      team: "Crystal Palace",
+      totalG: 23,
+      totalGA: 10
+    },
+    {
+      team: "Brentford",
+      totalG: 23,
+      totalGA: 10
+    },
+    {
+      team: "Southampton",
+      totalG: 23,
+      totalGA: 10
+    },
+    {
+      team: "Manchester United",
+      totalG: 23,
+      totalGA: 10
+    },
+    {
+      team: "West Ham United",
+      totalG: 23,
+      totalGA: 10
+    },
+    {
+      team: "Arsenal",
+      totalG: 23,
+      totalGA: 10
+    },
+    {
+      team: "Everton",
+      totalG: 23,
+      totalGA: 10
+    },
+    {
+      team: "Leeds United",
+      totalG: 23,
+      totalGA: 10
+    }
+  ]
+
+
+  let teamNames = []
+  let totalGoals = []
+  let totalGoalsAgainst = []
+
+  teamStats.forEach((obj) => {
+    teamNames.push(obj.team)
+    totalGoals.push(obj.totalG)
+    totalGoalsAgainst.push(obj.totalGA)
+  })
+
+  console.log(teamNames)
+
+  let ctx = getElementById('totalGoals').getContext('2d');
