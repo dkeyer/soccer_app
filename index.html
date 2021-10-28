@@ -35,8 +35,26 @@
     <script src="js/app.js"></script>
 
     <H3>Pre-Match Stats</H3>
-    <canvas id="totalGoals" width="400" height="300"></canvas>
-<br>
+    
+    <div>
+    <canvas id="goalsChart" width="400" height="300"></canvas>
+   </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>var myChart = document.getElementById('goalsChart').getContext('2d');
+
+   var totalGoalsChart = new Chart(myChart,{
+     type: "bar",
+     data:{
+       labels: teamNames,
+       datasets:[{
+         label: 'Yes',
+         data: totalGoals
+       }]
+     },
+     options:{}
+   });</script>
+
+   <br>
 <br>
 <br>
     
@@ -66,4 +84,5 @@
 
 </body>
 </html>
+
 

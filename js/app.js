@@ -171,6 +171,7 @@ var teamStats = [
     totalGoalsAgainst.push(obj.totalGA)
   })
 
-  console.log(teamNames)
+  
 
-  let ctx = getElementById('totalGoals').getContext('2d');
+  
+
