@@ -1,0 +1,146 @@
+[
+  {
+    "team_name": "Stoke City",
+    "goals_scored": 17,
+    "goals_conceded": 16,
+    "matches_played": 14
+  },
+  {
+    "team_name": "West Bromwich Albion",
+    "goals_scored": 25,
+    "goals_conceded": 11,
+    "matches_played": 14
+  },
+  {
+    "team_name": "Middlesbrough",
+    "goals_scored": 17,
+    "goals_conceded": 13,
+    "matches_played": 14
+  },
+  {
+    "team_name": "AFC Bournemouth",
+    "goals_scored": 24,
+    "goals_conceded": 8,
+    "matches_played": 14
+  },
+  {
+    "team_name": "Hull City",
+    "goals_scored": 9,
+    "goals_conceded": 20,
+    "matches_played": 14
+  },
+  {
+    "team_name": "Swansea City",
+    "goals_scored": 15,
+    "goals_conceded": 17,
+    "matches_played": 14
+  },
+  {
+    "team_name": "Queens Park Rangers",
+    "goals_scored": 25,
+    "goals_conceded": 22,
+    "matches_played": 14
+  },
+  {
+    "team_name": "Cardiff City",
+    "goals_scored": 12,
+    "goals_conceded": 26,
+    "matches_played": 14
+  },
+  {
+    "team_name": "Fulham",
+    "goals_scored": 33,
+    "goals_conceded": 14,
+    "matches_played": 14
+  },
+  {
+    "team_name": "Birmingham City",
+    "goals_scored": 12,
+    "goals_conceded": 17,
+    "matches_played": 14
+  },
+  {
+    "team_name": "Bristol City",
+    "goals_scored": 15,
+    "goals_conceded": 20,
+    "matches_played": 14
+  },
+  {
+    "team_name": "Preston North End",
+    "goals_scored": 14,
+    "goals_conceded": 18,
+    "matches_played": 14
+  },
+  {
+    "team_name": "Nottingham Forest",
+    "goals_scored": 18,
+    "goals_conceded": 20,
+    "matches_played": 14
+  },
+  {
+    "team_name": "Derby County",
+    "goals_scored": 10,
+    "goals_conceded": 11,
+    "matches_played": 14
+  },
+  {
+    "team_name": "Barnsley",
+    "goals_scored": 9,
+    "goals_conceded": 20,
+    "matches_played": 14
+  },
+  {
+    "team_name": "Blackburn Rovers",
+    "goals_scored": 23,
+    "goals_conceded": 17,
+    "matches_played": 14
+  },
+  {
+    "team_name": "Huddersfield Town",
+    "goals_scored": 18,
+    "goals_conceded": 17,
+    "matches_played": 14
+  },
+  {
+    "team_name": "Reading",
+    "goals_scored": 20,
+    "goals_conceded": 24,
+    "matches_played": 14
+  },
+  {
+    "team_name": "Blackpool",
+    "goals_scored": 17,
+    "goals_conceded": 18,
+    "matches_played": 14
+  },
+  {
+    "team_name": "Millwall",
+    "goals_scored": 15,
+    "goals_conceded": 15,
+    "matches_played": 14
+  },
+  {
+    "team_name": "Coventry City",
+    "goals_scored": 20,
+    "goals_conceded": 17,
+    "matches_played": 14
+  },
+  {
+    "team_name": "Peterborough United",
+    "goals_scored": 16,
+    "goals_conceded": 27,
+    "matches_played": 14
+  },
+  {
+    "team_name": "Sheffield United",
+    "goals_scored": 20,
+    "goals_conceded": 21,
+    "matches_played": 14
+  },
+  {
+    "team_name": "Luton Town",
+    "goals_scored": 23,
+    "goals_conceded": 18,
+    "matches_played": 14
+  }
+]
