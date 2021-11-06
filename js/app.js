@@ -254,8 +254,7 @@ var teamStats = [
  
   
   //Could write a loop for this to clean it up a bit once I add MP so not running it so many times
-
-  console.log(teamAvgGoals)
+ 
 
   
 

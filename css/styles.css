@@ -7,11 +7,12 @@
     
 }
 
-@media screen and (min-width:1024px){
+@media screen and (min-width:1024px){}
    
     
 
-*{
+*
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -50,4 +51,10 @@ justify-content: center;
     object-fit: cover;
 }
 
+.stat-headings{
+    font-size: 32px;
 }
+
+.gameweek{}
+
+

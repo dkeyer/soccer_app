@@ -34,8 +34,9 @@
    </section>
     <script src="js/app.js"></script>
 
-    <H3>Pre-Match Stats</H3>
-    
+    <h3>Pre-Match Stats</h3>
+    <br>
+    <h3 class="stat-headings">Total Goals</h3>
     <div>
     <canvas id="goalsChart" width="400" height="300"></canvas>
    </div>
@@ -47,18 +48,42 @@
      data:{
        labels: teamNames,
        datasets:[{
-         label: 'Yes',
-         data: totalGoals
+         label: 'Total Goals',
+         data: totalGoals,
+         backgroundColor:"#7B68EE"
+         
        }]
      },
      options:{}
    });</script>
 
+
+   <h3 class="stat-headings">Average Goals/Match</h3>
+
+   <div>
+      <canvas id="avgGoalsPerGameChart" width="400" height="300"></canvas>
+     </div>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>var myChart = document.getElementById('avgGoalsPerGameChart').getContext('2d');
+  
+     var averageGoalsChart = new Chart(myChart,{
+       type: "bar",
+       data:{
+         labels: teamNames,
+         datasets:[{
+           label: 'Average Goals Per Game',
+           data: teamAvgGoals,
+           backgroundColor:"#66CDAA"
+         }]
+       },
+       options:{}
+     });</script>
+
    <br>
 <br>
 <br>
     
-   <form onsubmit="validatePredictions();  return false">
+   <form onsubmit="saveFile();  return false">
       <div class="prediction-form">
          <h1 class="predictionsTitle">Predictions</h1>
          <p class="predictionText">How many total goals will be scored during the gameweek?</p>
@@ -78,9 +103,55 @@
         id="prediction"
         />
       
-        <button type="submit">Submit</button>
+        <button type="submit" id="submit">Submit</button>
       </div>
    </form> 
+
+   <script>
+      let storedPredictions = []
+      const addInfoAndPredictions = (ev) => {
+        ev.PreventDefault();
+        let input = {
+          guesserName : getElementById('name').value,
+          guesserEmail : getElementById('email').value,
+          guesserPrediction : getElementById('prediction').value
+        }
+    
+        storedPredictions.push(input);
+        document.querySelector('form').reset();
+        
+      }
+
+      const saveFile = () => {
+         // Get the data from each element on the form.
+          const guesserName = getElementById('name').value
+          const guesserEmail = getElementById('email').value
+          const guesserPrediction = getElementById('prediction').value
+         
+         // This variable stores all the data.
+         let data = "\r Name: " + guesserName + " \r\n " + "Email: " + guesserEmail + " \r\n " + "Prediction: " + guesserPrediction
+         console.log(data); //printing form data into the console
+         // Convert the text to BLOB.
+         const textToBLOB = new Blob([data], { type: "text/plain" });
+         var filename = new Date();
+         
+         const sFileName = filename; // The file to save the data.
+
+         let newLink = document.createElement("a");
+         newLink.download = new Date();
+
+         if (window.webkitURL != null) {
+             newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+         } else {
+             newLink.href = window.URL.createObjectURL(textToBLOB);
+             newLink.style.display = "none";
+             document.body.appendChild(newLink);
+         }
+
+         newLink.click();
+     };
+     
+   </script>
 
 </body>
 </html>
