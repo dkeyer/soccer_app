@@ -10,7 +10,11 @@
 <body>
    <section class="coming-soon">
       <img class="pic" src="./english-championship.png"/>
-    <div class="gameweek">
+      <br>
+      <br>
+      <h2 class="intro-text">Welcome! This app will give you up to date stats on all of the teams in the English Championship, and features a predictions contest you can enter at the bottom of the page.</h2>
+   <br>
+      <div class="gameweek">
         <h2>Gameweek 14</h2>
         <div class="countdown">
         <div class="day_container">
@@ -83,10 +87,13 @@
 <br>
 <br>
     
-   <form onsubmit="saveFile();  return false">
+   <form onsubmit="validatePredictions();  return false">
       <div class="prediction-form">
+         <div class="title-and-instructions">
          <h1 class="predictionsTitle">Predictions</h1>
          <p class="predictionText">How many total goals will be scored during the gameweek?</p>
+         
+
          <label for="name">Your name</label>
          <input type="text"
         placeholder="Your name here"
@@ -103,7 +110,7 @@
         id="prediction"
         />
       
-        <button type="submit" id="submit">Submit</button>
+        <button type="submit" onclick="store()">Submit</button>
       </div>
    </form> 
 
@@ -151,6 +158,23 @@
          newLink.click();
      };
      
+   </script>
+
+   <script>
+      function persistInput(input)
+{
+  var key = "input-" + input.id;
+
+  var storedValue = localStorage.getItem(key);
+
+  if (storedValue)
+      input.value = storedValue;
+
+  input.addEventListener('email', function ()
+  {
+      localStorage.setItem(key, input.value);
+  });
+}
    </script>
 
 </body>

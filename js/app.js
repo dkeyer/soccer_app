@@ -36,17 +36,16 @@ const predictionInput = document.getElementById('prediction').value;
 
 if (nameInput.length < 2) 
 {
-    alert('wrong');
+    alert('Please enter your full name');
 }
 
 else if (!emailInput.includes("@")){
     alert("Please enter a valid email");
 }
 
-else if (predictionInput > 100) {
-    alert("be realistic");
+else if (predictionInput < 0) {
+    alert("Please enter a number greater than or equal to zero");
 }
-
 
 
 else {

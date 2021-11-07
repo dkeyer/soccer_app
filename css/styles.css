@@ -1,26 +1,13 @@
-@media screen and (min-width: 480px){
-
-
-}
-
-@media screen and (min-width: 768px){
-    
-}
-
-@media screen and (min-width:1024px){}
-   
-    
-
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 h2 {
     font-size: 5rem;
     font-weight: bold;
+}
+
+.prediction-form{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0;
+    border-radius: 5px;
 }
 
 .coming-soon{
@@ -41,6 +28,10 @@ justify-content: center;
     font-size: 3rem;
 }
 
+.intro-text{
+    font-size: 20px;
+}
+
 .pic{
     margin-left: auto;
     margin-right: auto;
@@ -51,10 +42,46 @@ justify-content: center;
     object-fit: cover;
 }
 
-.stat-headings{
-    font-size: 32px;
+.goalsChart{
+    
 }
 
-.gameweek{}
+
+@media screen and (min-width: 480px){
+
+
+}
+
+@media screen and (min-width: 768px){
+
+.prediction-form{
+    
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.title-and-instructions{
+    flex-direction: column;
+    justify-content: space-around;
+}
+    
+}
+
+@media screen and (min-width:1024px){
+    .prediction-form{
+        flex-direction: column;
+        justify-content: space-around;
+        display: grid;
+    }
+}
+   
+    
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 
