@@ -1,183 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body>
-   <section class="coming-soon">
-      <img class="pic" src="./english-championship.png"/>
-      <br>
-      <br>
-      <h2 class="intro-text">Welcome! This app will give you up to date stats on all of the teams in the English Championship, and features a predictions contest you can enter at the bottom of the page.</h2>
-   <br>
+  </head>
+  <body>
+    <section class="coming-soon">
+      <img class="pic" src="./english-championship.png" />
+      <br />
+      <br />
+      <h2 class="intro-text">
+        Welcome! This app will give you up to date stats on all of the teams in
+        the English Championship, and features a predictions contest you can
+        enter at the bottom of the page.
+      </h2>
+      <br />
       <div class="gameweek">
         <h2>Gameweek 14</h2>
         <div class="countdown">
-        <div class="day_container">
-           <h3 class="day">time</h3> 
-           <h3>DAYS</h3>
-        </div>
-        <div class="hour_container">
-            <h3 class="hour">time</h3> 
+          <div class="day_container">
+            <h3 class="day">time</h3>
+            <h3>DAYS</h3>
+          </div>
+          <div class="hour_container">
+            <h3 class="hour">time</h3>
             <h3>HOURS</h3>
-         </div>
-         <div class="minute_container">
-            <h3 class="minute">time</h3> 
+          </div>
+          <div class="minute_container">
+            <h3 class="minute">time</h3>
             <h3>MINUTES</h3>
-         </div>
-         <div class="second_container">
-            <h3 class="second">time</h3> 
+          </div>
+          <div class="second_container">
+            <h3 class="second">time</h3>
             <h3>SECONDS</h3>
-         </div>
+          </div>
+        </div>
       </div>
-</div>
-   </section>
+    </section>
+    <div class="matchups">
+      <div class="tile"><div>Stoke - 1.2 g/match</div> <div>Peterborough - 1.14 g/match</div> </div>
+      <div class="tile"><div>Stoke - 1.2 g/m</div> <div>Peterborough - 1.14 g</div> </div>
+      <div class="tile"><div>Stoke - 1.2 g/m</div> <div>Peterborough - 1.14 g</div> </div>
+      <div class="tile"><div>Stoke - 1.2 g/m</div> <div>Peterborough - 1.14 g</div> </div>
+      <div class="tile"><div>Stoke - 1.2 g/m</div> <div>Peterborough - 1.14 g</div> </div>
+      <div class="tile"><div>Stoke - 1.2 g/m</div> <div>Peterborough - 1.14 g</div> </div>
+      <div class="tile"><div>Stoke - 1.2 g/m</div> <div>Peterborough - 1.14 g</div> </div>
+      <div class="tile"><div>Stoke - 1.2 g/m</div> <div>Peterborough - 1.14 g</div> </div>
+      <div class="tile"><div>Stoke - 1.2 g/m</div> <div>Peterborough - 1.14 g</div> </div>
+      <div class="tile"><div>Stoke - 1.2 g/m</div> <div>Peterborough - 1.14 g</div> </div>
+      <div class="tile"><div>Stoke - 1.2 g/m</div> <div>Peterborough - 1.14 g</div> </div>
+      <div class="tile"><div>Stoke - 1.2 g/m</div> <div>Peterborough - 1.14 g</div> </div>
+    </div>
     <script src="js/app.js"></script>
 
     <h3>Pre-Match Stats</h3>
-    <br>
+    <br />
     <h3 class="stat-headings">Total Goals</h3>
     <div>
-    <canvas id="goalsChart" width="400" height="300"></canvas>
-   </div>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>var myChart = document.getElementById('goalsChart').getContext('2d');
+      <canvas id="goalsChart" width="400" height="300"></canvas>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"
+      integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      var myChart = document.getElementById("goalsChart").getContext("2d");
 
-   var totalGoalsChart = new Chart(myChart,{
-     type: "bar",
-     data:{
-       labels: teamNames,
-       datasets:[{
-         label: 'Total Goals',
-         data: totalGoals,
-         backgroundColor:"#7B68EE"
-         
-       }]
-     },
-     options:{}
-   });</script>
+      var totalGoalsChart = new Chart(myChart, {
+        type: "bar",
+        data: {
+          labels: teamNames,
+          datasets: [
+            {
+              label: "Total Goals",
+              data: totalGoals,
+              backgroundColor: "#7B68EE",
+            },
+          ],
+        },
+        options: {},
+      });
+    </script>
 
+    <h3 class="stat-headings">Average Goals/Match</h3>
 
-   <h3 class="stat-headings">Average Goals/Match</h3>
-
-   <div>
+    <div>
       <canvas id="avgGoalsPerGameChart" width="400" height="300"></canvas>
-     </div>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js" integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script>var myChart = document.getElementById('avgGoalsPerGameChart').getContext('2d');
-  
-     var averageGoalsChart = new Chart(myChart,{
-       type: "bar",
-       data:{
-         labels: teamNames,
-         datasets:[{
-           label: 'Average Goals Per Game',
-           data: teamAvgGoals,
-           backgroundColor:"#66CDAA"
-         }]
-       },
-       options:{}
-     });</script>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"
+      integrity="sha512-GMGzUEevhWh8Tc/njS0bDpwgxdCJLQBWG3Z2Ct+JGOpVnEmjvNx6ts4v6A2XJf1HOrtOsfhv3hBKpK9kE5z8AQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      var myChart = document
+        .getElementById("avgGoalsPerGameChart")
+        .getContext("2d");
 
-   <br>
-<br>
-<br>
-    
-   <form onsubmit="validatePredictions();  return false">
+      var averageGoalsChart = new Chart(myChart, {
+        type: "bar",
+        data: {
+          labels: teamNames,
+          datasets: [
+            {
+              label: "Average Goals Per Game",
+              data: teamAvgGoals,
+              backgroundColor: "#66CDAA",
+            },
+          ],
+        },
+        options: {},
+      });
+    </script>
+
+    <br />
+    <br />
+    <br />
+
+    <form onsubmit="validatePredictions();  return false">
+      <div class="title-and-instructions">
+        <h1 class="predictionsTitle">Predictions</h1>
+        <p class="predictionText">
+          How many total goals will be scored during the gameweek?
+        </p>
+      </div>
       <div class="prediction-form">
-         <div class="title-and-instructions">
-         <h1 class="predictionsTitle">Predictions</h1>
-         <p class="predictionText">How many total goals will be scored during the gameweek?</p>
-         
+        <div class="input-wrapper">
+          <label for="name">Your name</label>
+          <input type="text" placeholder="Your name here" id="name" />
+        </div>
+        <div class="input-wrapper">
+          <label for="email">Your email</label>
+          <input type="text" placeholder="Your email address here" id="email" />
+        </div>
+        <div class="input-wrapper">
+          <label for="prediction">Your prediction</label>
+          <input
+            type="text"
+            placeholder="Your prediction here"
+            id="prediction"
+          />
+        </div>
 
-         <label for="name">Your name</label>
-         <input type="text"
-        placeholder="Your name here"
-        id="name"
-        />
-        <label for="email">Your email</label>
-        <input type="text"
-       placeholder="Your email address here"
-       id="email"
-       />
-        <label for="prediction">Your prediction</label>
-         <input type="text"
-        placeholder="Your prediction here"
-        id="prediction"
-        />
-      
         <button type="submit" onclick="store()">Submit</button>
       </div>
-   </form> 
+    </form>
 
-   <script>
-      let storedPredictions = []
+    <script>
+      let storedPredictions = [];
       const addInfoAndPredictions = (ev) => {
         ev.PreventDefault();
         let input = {
-          guesserName : getElementById('name').value,
-          guesserEmail : getElementById('email').value,
-          guesserPrediction : getElementById('prediction').value
-        }
-    
+          guesserName: getElementById("name").value,
+          guesserEmail: getElementById("email").value,
+          guesserPrediction: getElementById("prediction").value,
+        };
+
         storedPredictions.push(input);
-        document.querySelector('form').reset();
-        
-      }
+        document.querySelector("form").reset();
+      };
 
       const saveFile = () => {
-         // Get the data from each element on the form.
-          const guesserName = getElementById('name').value
-          const guesserEmail = getElementById('email').value
-          const guesserPrediction = getElementById('prediction').value
-         
-         // This variable stores all the data.
-         let data = "\r Name: " + guesserName + " \r\n " + "Email: " + guesserEmail + " \r\n " + "Prediction: " + guesserPrediction
-         console.log(data); //printing form data into the console
-         // Convert the text to BLOB.
-         const textToBLOB = new Blob([data], { type: "text/plain" });
-         var filename = new Date();
-         
-         const sFileName = filename; // The file to save the data.
+        // Get the data from each element on the form.
+        const guesserName = getElementById("name").value;
+        const guesserEmail = getElementById("email").value;
+        const guesserPrediction = getElementById("prediction").value;
 
-         let newLink = document.createElement("a");
-         newLink.download = new Date();
+        // This variable stores all the data.
+        let data =
+          "\r Name: " +
+          guesserName +
+          " \r\n " +
+          "Email: " +
+          guesserEmail +
+          " \r\n " +
+          "Prediction: " +
+          guesserPrediction;
+        console.log(data); //printing form data into the console
+        // Convert the text to BLOB.
+        const textToBLOB = new Blob([data], { type: "text/plain" });
+        var filename = new Date();
 
-         if (window.webkitURL != null) {
-             newLink.href = window.webkitURL.createObjectURL(textToBLOB);
-         } else {
-             newLink.href = window.URL.createObjectURL(textToBLOB);
-             newLink.style.display = "none";
-             document.body.appendChild(newLink);
-         }
+        const sFileName = filename; // The file to save the data.
 
-         newLink.click();
-     };
-     
-   </script>
+        let newLink = document.createElement("a");
+        newLink.download = new Date();
 
-   <script>
-      function persistInput(input)
-{
-  var key = "input-" + input.id;
+        if (window.webkitURL != null) {
+          newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+        } else {
+          newLink.href = window.URL.createObjectURL(textToBLOB);
+          newLink.style.display = "none";
+          document.body.appendChild(newLink);
+        }
 
-  var storedValue = localStorage.getItem(key);
+        newLink.click();
+      };
+    </script>
 
-  if (storedValue)
-      input.value = storedValue;
+    <script>
+      function persistInput(input) {
+        var key = "input-" + input.id;
 
-  input.addEventListener('email', function ()
-  {
-      localStorage.setItem(key, input.value);
-  });
-}
-   </script>
+        var storedValue = localStorage.getItem(key);
 
-</body>
+        if (storedValue) input.value = storedValue;
+
+        input.addEventListener("email", function () {
+          localStorage.setItem(key, input.value);
+        });
+      }
+    </script>
+  </body>
 </html>
-
-

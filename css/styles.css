@@ -1,87 +1,91 @@
 h2 {
-    font-size: 5rem;
-    font-weight: bold;
+  font-size: 5rem;
+  font-weight: bold;
 }
 
-.prediction-form{
-    display: flex;
-    flex-direction: column;
-    margin: 0.5rem 0;
-    border-radius: 5px;
+.prediction-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+  border-radius: 5px;
 }
 
-.coming-soon{
-min-height: 100vh;
-display: flex;
-align-items: center;
-flex-direction: column;
-justify-content: center;
+.matchups {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  gap: 0.25rem;
+  
 }
 
-.countdown{
-    display: flex;
-    justify-content: space-around;
+.tile{
+    padding: 1rem;
+    background-color: rgba(25, 0, 255, 0.3);
     text-align: center;
 }
 
-.day, .hour, .minute, .second{
-    font-size: 3rem;
+.coming-soon {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.intro-text{
-    font-size: 20px;
+.countdown {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
 }
 
-.pic{
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    text-align: right;
-    max-width: 50%;
-    min-height: 50%;
-    object-fit: cover;
+.day,
+.hour,
+.minute,
+.second {
+  font-size: 3rem;
 }
 
-.goalsChart{
-    
+.intro-text {
+  font-size: 20px;
 }
 
-
-@media screen and (min-width: 480px){
-
-
+.pic {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: right;
+  max-width: 50%;
+  min-height: 50%;
+  object-fit: cover;
 }
 
-@media screen and (min-width: 768px){
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 
-.prediction-form{
-    
-    flex-direction: column;
+/* .goalsChart {
+} */
+
+@media screen and (min-width: 480px) {
+}
+
+@media screen and (min-width: 768px) {
+  .matchups {
+    grid-template-columns: repeat(auto-fill,minmax(160px, 1fr));
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .prediction-form {
+    flex-direction: row;
     justify-content: space-around;
+  }
 }
 
-.title-and-instructions{
-    flex-direction: column;
-    justify-content: space-around;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-    
-}
-
-@media screen and (min-width:1024px){
-    .prediction-form{
-        flex-direction: column;
-        justify-content: space-around;
-        display: grid;
-    }
-}
-   
-    
-
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-

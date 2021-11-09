@@ -225,31 +225,8 @@ var teamStats = [
 
     teamAvgGoals.push(avgGoals)
   }
-  
-  getAvgGoals(totalGoals[0], totalMP[0])
-  getAvgGoals(totalGoals[1], totalMP[1])
-  getAvgGoals(totalGoals[2], totalMP[2])
-  getAvgGoals(totalGoals[3], totalMP[3])
-  getAvgGoals(totalGoals[4], totalMP[4])
-  getAvgGoals(totalGoals[5], totalMP[5])
-  getAvgGoals(totalGoals[6], totalMP[6])
-  getAvgGoals(totalGoals[7], totalMP[7])
-  getAvgGoals(totalGoals[8], totalMP[8])
-  getAvgGoals(totalGoals[9], totalMP[9])
-  getAvgGoals(totalGoals[10], totalMP[10])
-  getAvgGoals(totalGoals[11], totalMP[11])
-  getAvgGoals(totalGoals[12], totalMP[12])
-  getAvgGoals(totalGoals[13], totalMP[13])
-  getAvgGoals(totalGoals[14], totalMP[14])
-  getAvgGoals(totalGoals[15], totalMP[15])
-  getAvgGoals(totalGoals[16], totalMP[16])
-  getAvgGoals(totalGoals[17], totalMP[17])
-  getAvgGoals(totalGoals[18], totalMP[18])
-  getAvgGoals(totalGoals[19], totalMP[19])
-  getAvgGoals(totalGoals[20], totalMP[20])
-  getAvgGoals(totalGoals[21], totalMP[21])
-  getAvgGoals(totalGoals[22], totalMP[22])
-  getAvgGoals(totalGoals[23], totalMP[23])
+
+  totalGoals.forEach((goals, index) => getAvgGoals(goals, totalMP[index]))
  
   
   //Could write a loop for this to clean it up a bit once I add MP so not running it so many times
