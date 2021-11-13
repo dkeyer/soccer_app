@@ -42,17 +42,17 @@
     </section>
     <div class="matchups">
       <div class="tile"><div>Stoke - 1.2 g/match</div> <div>Peterborough - 1.14 g/match</div> </div>
-      <div class="tile"><div>Stoke - 1.2 g/m</div> <div>Peterborough - 1.14 g</div> </div>
-      <div class="tile"><div>Stoke - 1.2 g/m</div> <div>Peterborough - 1.14 g</div> </div>
-      <div class="tile"><div>Stoke - 1.2 g/m</div> <div>Peterborough - 1.14 g</div> </div>
-      <div class="tile"><div>Stoke - 1.2 g/m</div> <div>Peterborough - 1.14 g</div> </div>
-      <div class="tile"><div>Stoke - 1.2 g/m</div> <div>Peterborough - 1.14 g</div> </div>
-      <div class="tile"><div>Stoke - 1.2 g/m</div> <div>Peterborough - 1.14 g</div> </div>
-      <div class="tile"><div>Stoke - 1.2 g/m</div> <div>Peterborough - 1.14 g</div> </div>
-      <div class="tile"><div>Stoke - 1.2 g/m</div> <div>Peterborough - 1.14 g</div> </div>
-      <div class="tile"><div>Stoke - 1.2 g/m</div> <div>Peterborough - 1.14 g</div> </div>
-      <div class="tile"><div>Stoke - 1.2 g/m</div> <div>Peterborough - 1.14 g</div> </div>
-      <div class="tile"><div>Stoke - 1.2 g/m</div> <div>Peterborough - 1.14 g</div> </div>
+      <div class="tile"><div>QPR - 1.2 g/m</div> <div>Luton - 1.14 g</div> </div>
+      <div class="tile"><div>Sheff Utd - 1.2 g/m</div> <div>Coventry - 1.14 g</div> </div>
+      <div class="tile"><div>Bristol - 1.2 g/m</div> <div>Blackburn - 1.14 g</div> </div>
+      <div class="tile"><div>Fulham - 1.2 g/m</div> <div>Barnsley - 1.14 g</div> </div>
+      <div class="tile"><div>Huddersfield - 1.2 g/m</div> <div>WBA - 1.14 g</div> </div>
+      <div class="tile"><div>Hull - 1.2 g/m</div> <div>Birmingham - 1.14 g</div> </div>
+      <div class="tile"><div>Boro - 1.2 g/m</div> <div>Millwall - 1.14 g</div> </div>
+      <div class="tile"><div>Reading - 1.2 g/m</div> <div>Nottingham - 1.14 g</div> </div>
+      <div class="tile"><div>Preston - 1.2 g/m</div> <div>Cardiff - 1.14 g</div> </div>
+      <div class="tile"><div>Swansea - 1.2 g/m</div> <div>Blackpool - 1.14 g</div> </div>
+      <div class="tile"><div>Derby - 1.2 g/m</div> <div>Bournemouth - 1.14 g</div> </div>
     </div>
     <script src="js/app.js"></script>
 
@@ -118,6 +118,7 @@
         options: {},
       });
     </script>
+    
 
     <br />
     <br />
@@ -133,7 +134,7 @@
       <div class="prediction-form">
         <div class="input-wrapper">
           <label for="name">Your name</label>
-          <input type="text" placeholder="Your name here" id="name" />
+          <input type="text" id="name" placeholder="Your name here"/>
         </div>
         <div class="input-wrapper">
           <label for="email">Your email</label>
@@ -148,33 +149,20 @@
           />
         </div>
 
-        <button type="submit" onclick="store()">Submit</button>
+        <button type="submit" id="myButton" onclick="predictionSaver()">Submit</button>
       </div>
     </form>
 
     <script>
-      let storedPredictions = [];
-      const addInfoAndPredictions = (ev) => {
-        ev.PreventDefault();
-        let input = {
-          guesserName: getElementById("name").value,
-          guesserEmail: getElementById("email").value,
-          guesserPrediction: getElementById("prediction").value,
-        };
-
-        storedPredictions.push(input);
-        document.querySelector("form").reset();
-      };
-
-      const saveFile = () => {
-        // Get the data from each element on the form.
+      const predictionSaver = () => {
+        
         const guesserName = getElementById("name").value;
         const guesserEmail = getElementById("email").value;
         const guesserPrediction = getElementById("prediction").value;
-
-        // This variable stores all the data.
+ 
+        
         let data =
-          "\r Name: " +
+          "\r Name: " + 
           guesserName +
           " \r\n " +
           "Email: " +
@@ -185,13 +173,11 @@
         console.log(data); //printing form data into the console
         // Convert the text to BLOB.
         const textToBLOB = new Blob([data], { type: "text/plain" });
-        var filename = new Date();
-
-        const sFileName = filename; // The file to save the data.
-
+        var filename = 'pre.text'; // The file to save the data.
+ 
         let newLink = document.createElement("a");
-        newLink.download = new Date();
-
+        newLink.download = filename;
+ 
         if (window.webkitURL != null) {
           newLink.href = window.webkitURL.createObjectURL(textToBLOB);
         } else {
@@ -199,23 +185,14 @@
           newLink.style.display = "none";
           document.body.appendChild(newLink);
         }
-
+ 
         newLink.click();
-      };
+    }
+
+      
+      
     </script>
 
-    <script>
-      function persistInput(input) {
-        var key = "input-" + input.id;
-
-        var storedValue = localStorage.getItem(key);
-
-        if (storedValue) input.value = storedValue;
-
-        input.addEventListener("email", function () {
-          localStorage.setItem(key, input.value);
-        });
-      }
-    </script>
+    
   </body>
 </html>
