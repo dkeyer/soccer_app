@@ -156,9 +156,9 @@
     <script>
       const predictionSaver = () => {
         
-        const guesserName = getElementById("name").value;
-        const guesserEmail = getElementById("email").value;
-        const guesserPrediction = getElementById("prediction").value;
+        const guesserName = document.getElementById("name").value;
+        const guesserEmail = document.getElementById("email").value;
+        const guesserPrediction = document.getElementById("prediction").value;
  
         
         let data =
@@ -173,7 +173,7 @@
         console.log(data); //printing form data into the console
         // Convert the text to BLOB.
         const textToBLOB = new Blob([data], { type: "text/plain" });
-        var filename = 'pre.text'; // The file to save the data.
+        var filename = new Date(); // The file to save the data.
  
         let newLink = document.createElement("a");
         newLink.download = filename;
