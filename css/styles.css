@@ -50,6 +50,17 @@ h2 {
   font-size: 20px;
 }
 
+.stat-headings{
+  text-align: center;
+  text-decoration: underline;
+}
+
+.preMatch{
+  text-decoration: underline;
+  text-align: center;
+  font-size: 35px;
+}
+
 .pic {
   margin-left: auto;
   margin-right: auto;
@@ -89,3 +100,4 @@ h2 {
   padding: 0;
   box-sizing: border-box;
 }
+
